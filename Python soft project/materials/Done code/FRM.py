@@ -31,7 +31,7 @@ import subprocess
 import ffpass
 import configparser
 
-TOKEN = '5230772750:AAGGVxDrWqVu9HWsNyyB9TjBQCbeQi02nOQ' #Bot Token
+#TOKEN = '5230772750:AAGGVxDrWqVu9HWsNyyB9TjBQCbeQi02nOQ' #Bot Token
 CHAT_ID = '917703416' #Chat ID
 
 
