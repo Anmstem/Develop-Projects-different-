@@ -1,0 +1,12 @@
+However, I decided to choose the option to finalize the course project.
+Because the individual task seemed to me too narrow in execution. I also had problems with accounting for rejected materials and production.
+
+List of changes:
+1. The database is developed in a new project with some modifications compared to the previous project
+2. The real production strategy was taken into account as I was able to find an information mentor
+3. The data in the EXCEL document was corrected. They now have a more logical relationship between data and tables
+4. The data output screen has been improved. Now it has become more informative
+
+
+What remains unfinished:
+1. The data entry screen has not been created, as for me it presents some difficulty in practice. In theory I understand what needs to be done and I can even imagine the end result, but in practice it's more complicated.

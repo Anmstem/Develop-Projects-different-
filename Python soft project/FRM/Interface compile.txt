@@ -1,0 +1,11 @@
+# CMD
+# install pyinstaller 
+
+pip install pyinstaller 
+
+# Then go to the folder with your .py file on the command line (using the cd command)
+# Run the pyinstaller command remember to include the name of your script
+
+pyinstaller --onefile --noconsole <your_script_name>.py #without cmd
+
+# That's it - the src folder will appear in your folder and there will be an .exe file

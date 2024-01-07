@@ -1,0 +1,78 @@
+smartphone(iphone_11).
+smartphone(iphone_12).
+smartphone(samsung_s21_ultra).
+smartphone(xiaomi_redmi_note_8_pro).
+smartphone(huawei_mate_10_pro).
+
+memory(iphone_11, 128).
+memory(iphone_12, 256).
+memory(samsung_s21_ultra, 512).
+memory(xiaomi_redmi_note_8_pro, 64).
+memory(huawei_mate_10_pro, 64).
+
+release_date(iphone_11, 2019).
+release_date(iphone_12, 2020).
+release_date(samsung_s21_ultra, 2021).
+release_date(xiaomi_redmi_note_8_pro, 2019).
+release_date(huawei_mate_10_pro, 2018).
+
+price(iphone_11, 750).
+price(iphone_12, 1100).
+price(samsung_s21_ultra, 1600).
+price(xiaomi_redmi_note_8_pro, 350).
+price(huawei_mate_10_pro, 440).
+
+
+%koi telefoni sa byudzhetni?
+byudzheten_telefon(Phone, Y):- smartphone(Phone), price(Phone, Y), Y < 500.
+?-byudzheten_telefon(Phone, Price), write(Phone), 
+write(" e byudzheten telefon s cena "), write(Price), write("$"), nl, fail.
+
+
+%telefoni s mnogo pamet?
+mnogo_pamet(Phone, Memory):- smartphone(Phone), memory(Phone, Memory), 
+Memory > 128.
+?-mnogo_pamet(Phone, Memory), write(Phone), write(" ima "), 
+write(Memory), write("GB"), nl, fail.
+
+
+%optimalen telefon za kupuvane?
+optimalen_telefon(Phone, X, Y):- smartphone(Phone), price(Phone, X), 
+memory(Phone, Y), 
+X > 500, X < 1000, Y > 64, Y < 256.
+?-optimalen_telefon(Phone, X, Y), write(Phone), 
+write(" e optimalen telefon za kupuvane s cena "), write(X), 
+write("$"), nl, fail.
+
+
+%flagmanski telefon?
+flagmanski_telefon(Phone):- smartphone(Phone), price(Phone, X), 
+memory(Phone, Y), 
+release_date(Phone, Z), X > 1500, Y > 256, Z > 2020.
+?-flagmanski_telefon(Phone), write("Flagmanski telefon e: "), 
+write(Phone), nl, fail.
+
+
+%Da sa izvedat vsichkite telefoni s tehnite harakteristiki
+telefoni(Phone, X, Y, Z):- smartphone(Phone), memory(Phone, X), 
+release_date(Phone, Y),
+price(Phone, Z).
+?-telefoni(Phone, X, Y, Z), write(Phone), nl,
+write("Pamet: "), write(X), write("GB"), nl, 
+write("Data na puskane v prodajba: "), write(Y), 
+nl, write("Cena: "), write(Z), write("$"), nl, nl, fail. 
+
+
+%Koi telefon e obekt na otstypkata?
+%pravilo 1: data na puskane na produkta e pod 2019 
+otstypka(Phone):-release_date(Phone, Y), Y < 2019, !.
+%pravilo 2: Cena po malka ot 500$
+otstypka(Phone):-price(Phone, Y), Y < 500.
+%pravilo 3: Pamet da e pod 128GB
+otstypka(Phone):-memory(Phone, Y), Y < 128.
+?-otstypka(Phone), write("Telefon s otstypka: "), write(Phone), nl, fail.
+
+
+
+
+

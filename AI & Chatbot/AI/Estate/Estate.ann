@@ -1,0 +1,1318 @@
+<?xml version="1.0"  encoding="UTF-8" standalone="yes" ?>
+<neuro_intelligence_network>
+	<version><![CDATA[2.2.1]]></version>
+	<network_configuration>
+		<class>MLP</class>
+		<inputs_count>17</inputs_count>
+		<outputs_count>1</outputs_count>
+		<layers_count>2</layers_count>
+		<layer id="0">
+			<neurons_count>8</neurons_count>
+			<weights node="0">0.716769 | 0.0595285 | -1.88762 | 1.46362 | -1.78078 | 0.0349734 | -0.0993265 | 0.36924 | 0.165224 | -0.137893 | 0.27088 | 0.0536772 | -0.860009 | -0.297866 | 0.53448 | 0.0590818 | -0.252658 | -0.00957601
+			</weights>
+			<weights node="1">0.0176567 | 0.29179 | -0.367766 | 0.0517128 | 0.187845 | -0.223701 | 0.165601 | -0.173574 | -0.0307354 | -0.162284 | -0.288589 | 0.233353 | -0.257691 | 0.246632 | -0.0337378 | -0.103712 | 0.197628 | -0.0543442
+			</weights>
+			<weights node="2">-0.441092 | -0.473637 | 2.17603 | -0.451583 | 1.23566 | 0.0444049 | 0.228743 | -0.398762 | -0.220079 | 0.106297 | -0.141863 | -0.112929 | 0.878812 | 0.0954878 | -0.211913 | 0.0409435 | -0.157053 | -0.272907
+			</weights>
+			<weights node="3">-0.278762 | 0.239266 | 0.273357 | 0.196428 | 0.38772 | 0.0987252 | 0.127147 | 0.0134438 | 0.265925 | 0.2852 | -0.082733 | -0.25496 | 0.224531 | 0.0934811 | -0.129423 | -0.120214 | 0.201929 | 0.28776
+			</weights>
+			<weights node="4">0.189148 | -0.171042 | -1.66411 | 0.49132 | -1.11231 | -0.351133 | 0.142282 | 0.368149 | 0.270591 | -0.0131428 | -0.238171 | -0.0313696 | -0.52292 | -0.0862568 | 0.293613 | -0.257074 | -0.219221 | -0.157131
+			</weights>
+			<weights node="5">-0.626548 | -0.0463352 | 1.07927 | -0.834368 | 1.23079 | -0.23202 | 0.139353 | -0.280469 | 0.0160333 | 0.0705121 | -0.0492264 | 0.223436 | 0.549115 | -0.0769876 | -0.331395 | -0.283925 | -0.105745 | -0.246881
+			</weights>
+			<weights node="6">-0.233654 | -0.274342 | 0.167161 | -0.227798 | 0.244599 | 0.181933 | 0.250276 | -0.232259 | -0.037421 | 0.0891935 | -0.0692647 | -0.203589 | -0.114638 | -0.157447 | -0.114947 | -0.0324656 | -0.276221 | -0.0683342
+			</weights>
+			<weights node="7">0.519846 | -0.105506 | -2.32686 | 0.488678 | -1.81891 | -0.265043 | 0.0544573 | 0.136147 | -0.0811508 | 0.145126 | -0.0726555 | 0.0289483 | -0.640193 | 0.073602 | 0.457492 | 0.130762 | -0.123419 | -0.219293
+			</weights>
+			<activation_function>Logistic</activation_function>
+			
+		</layer>
+		<layer id="1">
+			<neurons_count>1</neurons_count>
+			<weights node="0">-0.82387 | -0.203691 | 0.398499 | 1.70373 | -0.417814 | 0.152395 | 0.0585367 | -0.846776 | -0.0159801
+			</weights>
+			<activation_function>Logistic</activation_function>
+			
+		</layer>
+		<input_range>
+			<min>-1</min>
+			<max>1</max>
+			
+		</input_range>
+		<output_range>
+			<min>0</min>
+			<max>1</max>
+			
+		</output_range>
+		
+	</network_configuration>
+	<dataset_configuration>
+		<columns>
+			<count>6</count>
+			<column id="0">
+				<header><![CDATA[Apartament]]></header>
+				<enabled>1</enabled>
+				<format>Enumerative</format>
+				<type>Input</type>
+				<categories>
+					<count>4</count>
+					<category id="0"><![CDATA[Dwustaen]]></category>
+					<category id="1"><![CDATA[Tristaen]]></category>
+					<category id="2"><![CDATA[Mnogostaen]]></category>
+					<category id="3"><![CDATA[Ednostaen]]></category>
+					
+				</categories>
+				<category_encoding><![CDATA[OneOfN]]></category_encoding>
+				
+			</column>
+			<column id="1">
+				<header><![CDATA[Ploschtad]]></header>
+				<enabled>1</enabled>
+				<format>Numeric</format>
+				<type>Input</type>
+				<scaling_params>
+					<min>20</min>
+					<max>100</max>
+					
+				</scaling_params>
+				
+			</column>
+			<column id="2">
+				<header><![CDATA[Etaj]]></header>
+				<enabled>1</enabled>
+				<format>Numeric</format>
+				<type>Input</type>
+				<scaling_params>
+					<min>1</min>
+					<max>14</max>
+					
+				</scaling_params>
+				
+			</column>
+			<column id="3">
+				<header><![CDATA[Mestopolojenie]]></header>
+				<enabled>1</enabled>
+				<format>Enumerative</format>
+				<type>Input</type>
+				<categories>
+					<count>8</count>
+					<category id="0"><![CDATA[Lewski]]></category>
+					<category id="1"><![CDATA[Grycki]]></category>
+					<category id="2"><![CDATA[Troshewo]]></category>
+					<category id="3"><![CDATA[Center]]></category>
+					<category id="4"><![CDATA[Chaika]]></category>
+					<category id="5"><![CDATA[Cweten]]></category>
+					<category id="6"><![CDATA[Hristo Botew]]></category>
+					<category id="7"><![CDATA[Briz]]></category>
+					
+				</categories>
+				<category_encoding><![CDATA[OneOfN]]></category_encoding>
+				
+			</column>
+			<column id="4">
+				<header><![CDATA[Obzawejdane]]></header>
+				<enabled>1</enabled>
+				<format>Enumerative</format>
+				<type>Input</type>
+				<categories>
+					<count>3</count>
+					<category id="0"><![CDATA[Pylno]]></category>
+					<category id="1"><![CDATA[Ne]]></category>
+					<category id="2"><![CDATA[Chastichno]]></category>
+					
+				</categories>
+				<category_encoding><![CDATA[OneOfN]]></category_encoding>
+				
+			</column>
+			<column id="5">
+				<header><![CDATA[Cena (euro)]]></header>
+				<enabled>1</enabled>
+				<format>Numeric</format>
+				<type>Output</type>
+				<scaling_params>
+					<min>22000</min>
+					<max>125000</max>
+					
+				</scaling_params>
+				
+			</column>
+			
+		</columns>
+		<data_inputs>17</data_inputs>
+		<data_outs>1</data_outs>
+		<CMap>
+			<exists>1</exists>
+			<column id="0">
+				<index>0</index>
+				<scol>0</scol>
+				<scol_phys>0</scol_phys>
+				<icols_count>4</icols_count>
+				<icols>0 | 1 | 2 | 3
+				</icols>
+				<icol_headers>
+					<size>4</size>
+					<item id="0">
+						<![CDATA[Apartament: Dwustaen]]>
+					</item>
+					<item id="1">
+						<![CDATA[Apartament: Tristaen]]>
+					</item>
+					<item id="2">
+						<![CDATA[Apartament: Mnogostaen]]>
+					</item>
+					<item id="3">
+						<![CDATA[Apartament: Ednostaen]]>
+					</item>
+					
+				</icol_headers>
+				<smin>-1</smin>
+				<smax>1</smax>
+				<dmin>-1</dmin>
+				<dmax>1</dmax>
+				<coef>1</coef>
+				<anomalies>0 | 0 | 0
+				</anomalies>
+				<anom_count>0</anom_count>
+				
+			</column>
+			<column id="1">
+				<index>1</index>
+				<scol>1</scol>
+				<scol_phys>1</scol_phys>
+				<icols_count>1</icols_count>
+				<icols>4
+				</icols>
+				<icol_headers>
+					<size>1</size>
+					<item id="0">
+						<![CDATA[Ploschtad]]>
+					</item>
+					
+				</icol_headers>
+				<smin>20</smin>
+				<smax>100</smax>
+				<dmin>-1</dmin>
+				<dmax>1</dmax>
+				<coef>0.025</coef>
+				<anomalies>0 | 0 | 0
+				</anomalies>
+				<anom_count>0</anom_count>
+				
+			</column>
+			<column id="2">
+				<index>2</index>
+				<scol>2</scol>
+				<scol_phys>2</scol_phys>
+				<icols_count>1</icols_count>
+				<icols>5
+				</icols>
+				<icol_headers>
+					<size>1</size>
+					<item id="0">
+						<![CDATA[Etaj]]>
+					</item>
+					
+				</icol_headers>
+				<smin>1</smin>
+				<smax>14</smax>
+				<dmin>-1</dmin>
+				<dmax>1</dmax>
+				<coef>0.153846</coef>
+				<anomalies>0 | 0 | 0
+				</anomalies>
+				<anom_count>0</anom_count>
+				
+			</column>
+			<column id="3">
+				<index>3</index>
+				<scol>3</scol>
+				<scol_phys>3</scol_phys>
+				<icols_count>8</icols_count>
+				<icols>6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
+				</icols>
+				<icol_headers>
+					<size>8</size>
+					<item id="0">
+						<![CDATA[Mestopolojenie: Lewski]]>
+					</item>
+					<item id="1">
+						<![CDATA[Mestopolojenie: Grycki]]>
+					</item>
+					<item id="2">
+						<![CDATA[Mestopolojenie: Troshewo]]>
+					</item>
+					<item id="3">
+						<![CDATA[Mestopolojenie: Center]]>
+					</item>
+					<item id="4">
+						<![CDATA[Mestopolojenie: Chaika]]>
+					</item>
+					<item id="5">
+						<![CDATA[Mestopolojenie: Cweten]]>
+					</item>
+					<item id="6">
+						<![CDATA[Mestopolojenie: Hristo Botew]]>
+					</item>
+					<item id="7">
+						<![CDATA[Mestopolojenie: Briz]]>
+					</item>
+					
+				</icol_headers>
+				<smin>-1</smin>
+				<smax>1</smax>
+				<dmin>-1</dmin>
+				<dmax>1</dmax>
+				<coef>1</coef>
+				<anomalies>0 | 0 | 0
+				</anomalies>
+				<anom_count>0</anom_count>
+				
+			</column>
+			<column id="4">
+				<index>4</index>
+				<scol>4</scol>
+				<scol_phys>4</scol_phys>
+				<icols_count>3</icols_count>
+				<icols>14 | 15 | 16
+				</icols>
+				<icol_headers>
+					<size>3</size>
+					<item id="0">
+						<![CDATA[Obzawejdane: Pylno]]>
+					</item>
+					<item id="1">
+						<![CDATA[Obzawejdane: Ne]]>
+					</item>
+					<item id="2">
+						<![CDATA[Obzawejdane: Chastichno]]>
+					</item>
+					
+				</icol_headers>
+				<smin>-1</smin>
+				<smax>1</smax>
+				<dmin>-1</dmin>
+				<dmax>1</dmax>
+				<coef>1</coef>
+				<anomalies>0 | 0 | 0
+				</anomalies>
+				<anom_count>0</anom_count>
+				
+			</column>
+			<column id="5">
+				<index>5</index>
+				<scol>5</scol>
+				<scol_phys>5</scol_phys>
+				<icols_count>1</icols_count>
+				<icols>17
+				</icols>
+				<icol_headers>
+					<size>1</size>
+					<item id="0">
+						<![CDATA[Cena (euro)]]>
+					</item>
+					
+				</icol_headers>
+				<smin>22000</smin>
+				<smax>125000</smax>
+				<dmin>0</dmin>
+				<dmax>1</dmax>
+				<coef>9.70874e-06</coef>
+				<anomalies>0 | 0 | 0
+				</anomalies>
+				<anom_count>0</anom_count>
+				
+			</column>
+			
+		</CMap>
+		
+	</dataset_configuration>
+	<neurointelligence_gui>
+		<global_column_descriptor>
+			<iSelCol>0</iSelCol>
+			<bAnalysisUseGlobal>1</bAnalysisUseGlobal>
+			<bReplaceByMean>1</bReplaceByMean>
+			<bReplaceByMedian>0</bReplaceByMedian>
+			<bReplaceByMin>0</bReplaceByMin>
+			<bReplaceByMax>0</bReplaceByMax>
+			<bReplaceByNeighbourAverage>0</bReplaceByNeighbourAverage>
+			<iNeighbourCount>1</iNeighbourCount>
+			<bReplaceByValue>0</bReplaceByValue>
+			<fReplaceValue>0</fReplaceValue>
+			<bReplaceByMostFreq>1</bReplaceByMostFreq>
+			<bReplaceByLeastFreq>0</bReplaceByLeastFreq>
+			<bReplaceByRandom>0</bReplaceByRandom>
+			<bReplaceByString>0</bReplaceByString>
+			<sReplaceString><![CDATA[]]></sReplaceString>
+			<bIdentOutliers>1</bIdentOutliers>
+			<fOutliersCoeff>3.5</fOutliersCoeff>
+			<bRemoveOutliers>1</bRemoveOutliers>
+			<bHandleOutliers>0</bHandleOutliers>
+			<bIdentMissing>1</bIdentMissing>
+			<bQuestAsMissing>1</bQuestAsMissing>
+			<bBlankAsMissing>1</bBlankAsMissing>
+			<bZeroAsMissing>0</bZeroAsMissing>
+			<bOtherAsMissing>0</bOtherAsMissing>
+			<sOtherAsMissing><![CDATA[]]></sOtherAsMissing>
+			<bRemoveMissing>1</bRemoveMissing>
+			<bHandleMissing>0</bHandleMissing>
+			<bIdentWrongType>1</bIdentWrongType>
+			<fWrongTypeAmount>0.005</fWrongTypeAmount>
+			<bRemoveWrongType>1</bRemoveWrongType>
+			<bHandleWrongType>0</bHandleWrongType>
+			<bEncodingUseGlobal>1</bEncodingUseGlobal>
+			<bAddBinaryToMissing>0</bAddBinaryToMissing>
+			<bAddBinaryToOutliers>0</bAddBinaryToOutliers>
+			<bAddBinaryToWrongtype>0</bAddBinaryToWrongtype>
+			<bAddLag>0</bAddLag>
+			<bSpecLags>0</bSpecLags>
+			<bSeqLags>1</bSeqLags>
+			<sSpecLags><![CDATA[]]></sSpecLags>
+			<SpecLags>
+				<size>0</size>
+				
+			</SpecLags>
+			<iLagStart>1</iLagStart>
+			<iLagEnd>1</iLagEnd>
+			<iLagStep>1</iLagStep>
+			<bEncodeAs1ofN>1</bEncodeAs1ofN>
+			<bEncodeAsBinary>0</bEncodeAsBinary>
+			<bEncodeAsNumeric>0</bEncodeAsNumeric>
+			<bEncodePeriod>1</bEncodePeriod>
+			<bWeekly>1</bWeekly>
+			<bMonthly>0</bMonthly>
+			<bYearly>0</bYearly>
+			<bEncodeAsCat>0</bEncodeAsCat>
+			<bDays>0</bDays>
+			<bWeekdays>0</bWeekdays>
+			<bMonths>1</bMonths>
+			<bQuaters>0</bQuaters>
+			<bYears>0</bYears>
+			<fMin>0</fMin>
+			<fMax>1</fMax>
+			<bHeadroom>0</bHeadroom>
+			<fHeadroom>0.1</fHeadroom>
+			<bPrepNeed>0</bPrepNeed>
+			<bIdentDate>1</bIdentDate>
+			<sDateFormat><![CDATA[dd.mm.yyyy]]></sDateFormat>
+			<DateFormat>
+				<delimiter><![CDATA[.]]></delimiter>
+				<part id="0">
+					<width>2</width>
+					<kind>0</kind>
+					
+				</part>
+				<part id="1">
+					<width>2</width>
+					<kind>1</kind>
+					
+				</part>
+				<part id="2">
+					<width>4</width>
+					<kind>2</kind>
+					
+				</part>
+				
+			</DateFormat>
+			<bIdentTime>1</bIdentTime>
+			<bNumColsAsCat>1</bNumColsAsCat>
+			<iNumColsAsCat>5</iNumColsAsCat>
+			<bTextColsAsCat>1</bTextColsAsCat>
+			<iTextColsAsCat>20</iTextColsAsCat>
+			<bDateTimeColsAsCat>1</bDateTimeColsAsCat>
+			<iDateTimeColsAsCat>8</iDateTimeColsAsCat>
+			
+		</global_column_descriptor>
+		<column_count>6</column_count>
+		<column_descriptor_0>
+			<column_name><![CDATA[Apartament]]></column_name>
+			<iSelCol>0</iSelCol>
+			<bAnalysisUseGlobal>1</bAnalysisUseGlobal>
+			<bReplaceByMean>1</bReplaceByMean>
+			<bReplaceByMedian>0</bReplaceByMedian>
+			<bReplaceByMin>0</bReplaceByMin>
+			<bReplaceByMax>0</bReplaceByMax>
+			<bReplaceByNeighbourAverage>0</bReplaceByNeighbourAverage>
+			<iNeighbourCount>1</iNeighbourCount>
+			<bReplaceByValue>0</bReplaceByValue>
+			<fReplaceValue>0</fReplaceValue>
+			<bReplaceByMostFreq>1</bReplaceByMostFreq>
+			<bReplaceByLeastFreq>0</bReplaceByLeastFreq>
+			<bReplaceByRandom>0</bReplaceByRandom>
+			<bReplaceByString>0</bReplaceByString>
+			<sReplaceString><![CDATA[]]></sReplaceString>
+			<bIdentOutliers>1</bIdentOutliers>
+			<fOutliersCoeff>3.5</fOutliersCoeff>
+			<bRemoveOutliers>1</bRemoveOutliers>
+			<bHandleOutliers>0</bHandleOutliers>
+			<bIdentMissing>1</bIdentMissing>
+			<bQuestAsMissing>1</bQuestAsMissing>
+			<bBlankAsMissing>1</bBlankAsMissing>
+			<bZeroAsMissing>0</bZeroAsMissing>
+			<bOtherAsMissing>0</bOtherAsMissing>
+			<sOtherAsMissing><![CDATA[]]></sOtherAsMissing>
+			<bRemoveMissing>1</bRemoveMissing>
+			<bHandleMissing>0</bHandleMissing>
+			<bIdentWrongType>1</bIdentWrongType>
+			<fWrongTypeAmount>0.005</fWrongTypeAmount>
+			<bRemoveWrongType>1</bRemoveWrongType>
+			<bHandleWrongType>0</bHandleWrongType>
+			<bEncodingUseGlobal>1</bEncodingUseGlobal>
+			<bAddBinaryToMissing>0</bAddBinaryToMissing>
+			<bAddBinaryToOutliers>0</bAddBinaryToOutliers>
+			<bAddBinaryToWrongtype>0</bAddBinaryToWrongtype>
+			<bAddLag>0</bAddLag>
+			<bSpecLags>0</bSpecLags>
+			<bSeqLags>1</bSeqLags>
+			<sSpecLags><![CDATA[]]></sSpecLags>
+			<SpecLags>
+				<size>0</size>
+				
+			</SpecLags>
+			<iLagStart>1</iLagStart>
+			<iLagEnd>1</iLagEnd>
+			<iLagStep>1</iLagStep>
+			<bEncodeAs1ofN>1</bEncodeAs1ofN>
+			<bEncodeAsBinary>0</bEncodeAsBinary>
+			<bEncodeAsNumeric>0</bEncodeAsNumeric>
+			<bEncodePeriod>1</bEncodePeriod>
+			<bWeekly>1</bWeekly>
+			<bMonthly>0</bMonthly>
+			<bYearly>0</bYearly>
+			<bEncodeAsCat>0</bEncodeAsCat>
+			<bDays>0</bDays>
+			<bWeekdays>0</bWeekdays>
+			<bMonths>1</bMonths>
+			<bQuaters>0</bQuaters>
+			<bYears>0</bYears>
+			<fMin>0</fMin>
+			<fMax>1</fMax>
+			<bHeadroom>0</bHeadroom>
+			<fHeadroom>0.1</fHeadroom>
+			<bPrepNeed>0</bPrepNeed>
+			<bIdentDate>1</bIdentDate>
+			<sDateFormat><![CDATA[dd.mm.yyyy]]></sDateFormat>
+			<DateFormat>
+				<delimiter><![CDATA[.]]></delimiter>
+				<part id="0">
+					<width>2</width>
+					<kind>0</kind>
+					
+				</part>
+				<part id="1">
+					<width>2</width>
+					<kind>1</kind>
+					
+				</part>
+				<part id="2">
+					<width>4</width>
+					<kind>2</kind>
+					
+				</part>
+				
+			</DateFormat>
+			<bIdentTime>1</bIdentTime>
+			<bNumColsAsCat>1</bNumColsAsCat>
+			<iNumColsAsCat>5</iNumColsAsCat>
+			<bTextColsAsCat>1</bTextColsAsCat>
+			<iTextColsAsCat>20</iTextColsAsCat>
+			<bDateTimeColsAsCat>1</bDateTimeColsAsCat>
+			<iDateTimeColsAsCat>8</iDateTimeColsAsCat>
+			
+		</column_descriptor_0>
+		<column_descriptor_1>
+			<column_name><![CDATA[Ploschtad]]></column_name>
+			<iSelCol>0</iSelCol>
+			<bAnalysisUseGlobal>1</bAnalysisUseGlobal>
+			<bReplaceByMean>1</bReplaceByMean>
+			<bReplaceByMedian>0</bReplaceByMedian>
+			<bReplaceByMin>0</bReplaceByMin>
+			<bReplaceByMax>0</bReplaceByMax>
+			<bReplaceByNeighbourAverage>0</bReplaceByNeighbourAverage>
+			<iNeighbourCount>1</iNeighbourCount>
+			<bReplaceByValue>0</bReplaceByValue>
+			<fReplaceValue>0</fReplaceValue>
+			<bReplaceByMostFreq>1</bReplaceByMostFreq>
+			<bReplaceByLeastFreq>0</bReplaceByLeastFreq>
+			<bReplaceByRandom>0</bReplaceByRandom>
+			<bReplaceByString>0</bReplaceByString>
+			<sReplaceString><![CDATA[]]></sReplaceString>
+			<bIdentOutliers>1</bIdentOutliers>
+			<fOutliersCoeff>3.5</fOutliersCoeff>
+			<bRemoveOutliers>1</bRemoveOutliers>
+			<bHandleOutliers>0</bHandleOutliers>
+			<bIdentMissing>1</bIdentMissing>
+			<bQuestAsMissing>1</bQuestAsMissing>
+			<bBlankAsMissing>1</bBlankAsMissing>
+			<bZeroAsMissing>0</bZeroAsMissing>
+			<bOtherAsMissing>0</bOtherAsMissing>
+			<sOtherAsMissing><![CDATA[]]></sOtherAsMissing>
+			<bRemoveMissing>1</bRemoveMissing>
+			<bHandleMissing>0</bHandleMissing>
+			<bIdentWrongType>1</bIdentWrongType>
+			<fWrongTypeAmount>0.005</fWrongTypeAmount>
+			<bRemoveWrongType>1</bRemoveWrongType>
+			<bHandleWrongType>0</bHandleWrongType>
+			<bEncodingUseGlobal>1</bEncodingUseGlobal>
+			<bAddBinaryToMissing>0</bAddBinaryToMissing>
+			<bAddBinaryToOutliers>0</bAddBinaryToOutliers>
+			<bAddBinaryToWrongtype>0</bAddBinaryToWrongtype>
+			<bAddLag>0</bAddLag>
+			<bSpecLags>0</bSpecLags>
+			<bSeqLags>1</bSeqLags>
+			<sSpecLags><![CDATA[]]></sSpecLags>
+			<SpecLags>
+				<size>0</size>
+				
+			</SpecLags>
+			<iLagStart>1</iLagStart>
+			<iLagEnd>1</iLagEnd>
+			<iLagStep>1</iLagStep>
+			<bEncodeAs1ofN>1</bEncodeAs1ofN>
+			<bEncodeAsBinary>0</bEncodeAsBinary>
+			<bEncodeAsNumeric>0</bEncodeAsNumeric>
+			<bEncodePeriod>1</bEncodePeriod>
+			<bWeekly>1</bWeekly>
+			<bMonthly>0</bMonthly>
+			<bYearly>0</bYearly>
+			<bEncodeAsCat>0</bEncodeAsCat>
+			<bDays>0</bDays>
+			<bWeekdays>0</bWeekdays>
+			<bMonths>1</bMonths>
+			<bQuaters>0</bQuaters>
+			<bYears>0</bYears>
+			<fMin>0</fMin>
+			<fMax>1</fMax>
+			<bHeadroom>0</bHeadroom>
+			<fHeadroom>0.1</fHeadroom>
+			<bPrepNeed>0</bPrepNeed>
+			<bIdentDate>1</bIdentDate>
+			<sDateFormat><![CDATA[dd.mm.yyyy]]></sDateFormat>
+			<DateFormat>
+				<delimiter><![CDATA[.]]></delimiter>
+				<part id="0">
+					<width>2</width>
+					<kind>0</kind>
+					
+				</part>
+				<part id="1">
+					<width>2</width>
+					<kind>1</kind>
+					
+				</part>
+				<part id="2">
+					<width>4</width>
+					<kind>2</kind>
+					
+				</part>
+				
+			</DateFormat>
+			<bIdentTime>1</bIdentTime>
+			<bNumColsAsCat>1</bNumColsAsCat>
+			<iNumColsAsCat>5</iNumColsAsCat>
+			<bTextColsAsCat>1</bTextColsAsCat>
+			<iTextColsAsCat>20</iTextColsAsCat>
+			<bDateTimeColsAsCat>1</bDateTimeColsAsCat>
+			<iDateTimeColsAsCat>8</iDateTimeColsAsCat>
+			
+		</column_descriptor_1>
+		<column_descriptor_2>
+			<column_name><![CDATA[Etaj]]></column_name>
+			<iSelCol>0</iSelCol>
+			<bAnalysisUseGlobal>1</bAnalysisUseGlobal>
+			<bReplaceByMean>1</bReplaceByMean>
+			<bReplaceByMedian>0</bReplaceByMedian>
+			<bReplaceByMin>0</bReplaceByMin>
+			<bReplaceByMax>0</bReplaceByMax>
+			<bReplaceByNeighbourAverage>0</bReplaceByNeighbourAverage>
+			<iNeighbourCount>1</iNeighbourCount>
+			<bReplaceByValue>0</bReplaceByValue>
+			<fReplaceValue>0</fReplaceValue>
+			<bReplaceByMostFreq>1</bReplaceByMostFreq>
+			<bReplaceByLeastFreq>0</bReplaceByLeastFreq>
+			<bReplaceByRandom>0</bReplaceByRandom>
+			<bReplaceByString>0</bReplaceByString>
+			<sReplaceString><![CDATA[]]></sReplaceString>
+			<bIdentOutliers>1</bIdentOutliers>
+			<fOutliersCoeff>3.5</fOutliersCoeff>
+			<bRemoveOutliers>1</bRemoveOutliers>
+			<bHandleOutliers>0</bHandleOutliers>
+			<bIdentMissing>1</bIdentMissing>
+			<bQuestAsMissing>1</bQuestAsMissing>
+			<bBlankAsMissing>1</bBlankAsMissing>
+			<bZeroAsMissing>0</bZeroAsMissing>
+			<bOtherAsMissing>0</bOtherAsMissing>
+			<sOtherAsMissing><![CDATA[]]></sOtherAsMissing>
+			<bRemoveMissing>1</bRemoveMissing>
+			<bHandleMissing>0</bHandleMissing>
+			<bIdentWrongType>1</bIdentWrongType>
+			<fWrongTypeAmount>0.005</fWrongTypeAmount>
+			<bRemoveWrongType>1</bRemoveWrongType>
+			<bHandleWrongType>0</bHandleWrongType>
+			<bEncodingUseGlobal>1</bEncodingUseGlobal>
+			<bAddBinaryToMissing>0</bAddBinaryToMissing>
+			<bAddBinaryToOutliers>0</bAddBinaryToOutliers>
+			<bAddBinaryToWrongtype>0</bAddBinaryToWrongtype>
+			<bAddLag>0</bAddLag>
+			<bSpecLags>0</bSpecLags>
+			<bSeqLags>1</bSeqLags>
+			<sSpecLags><![CDATA[]]></sSpecLags>
+			<SpecLags>
+				<size>0</size>
+				
+			</SpecLags>
+			<iLagStart>1</iLagStart>
+			<iLagEnd>1</iLagEnd>
+			<iLagStep>1</iLagStep>
+			<bEncodeAs1ofN>1</bEncodeAs1ofN>
+			<bEncodeAsBinary>0</bEncodeAsBinary>
+			<bEncodeAsNumeric>0</bEncodeAsNumeric>
+			<bEncodePeriod>1</bEncodePeriod>
+			<bWeekly>1</bWeekly>
+			<bMonthly>0</bMonthly>
+			<bYearly>0</bYearly>
+			<bEncodeAsCat>0</bEncodeAsCat>
+			<bDays>0</bDays>
+			<bWeekdays>0</bWeekdays>
+			<bMonths>1</bMonths>
+			<bQuaters>0</bQuaters>
+			<bYears>0</bYears>
+			<fMin>0</fMin>
+			<fMax>1</fMax>
+			<bHeadroom>0</bHeadroom>
+			<fHeadroom>0.1</fHeadroom>
+			<bPrepNeed>0</bPrepNeed>
+			<bIdentDate>1</bIdentDate>
+			<sDateFormat><![CDATA[dd.mm.yyyy]]></sDateFormat>
+			<DateFormat>
+				<delimiter><![CDATA[.]]></delimiter>
+				<part id="0">
+					<width>2</width>
+					<kind>0</kind>
+					
+				</part>
+				<part id="1">
+					<width>2</width>
+					<kind>1</kind>
+					
+				</part>
+				<part id="2">
+					<width>4</width>
+					<kind>2</kind>
+					
+				</part>
+				
+			</DateFormat>
+			<bIdentTime>1</bIdentTime>
+			<bNumColsAsCat>1</bNumColsAsCat>
+			<iNumColsAsCat>5</iNumColsAsCat>
+			<bTextColsAsCat>1</bTextColsAsCat>
+			<iTextColsAsCat>20</iTextColsAsCat>
+			<bDateTimeColsAsCat>1</bDateTimeColsAsCat>
+			<iDateTimeColsAsCat>8</iDateTimeColsAsCat>
+			
+		</column_descriptor_2>
+		<column_descriptor_3>
+			<column_name><![CDATA[Mestopolojenie]]></column_name>
+			<iSelCol>0</iSelCol>
+			<bAnalysisUseGlobal>1</bAnalysisUseGlobal>
+			<bReplaceByMean>1</bReplaceByMean>
+			<bReplaceByMedian>0</bReplaceByMedian>
+			<bReplaceByMin>0</bReplaceByMin>
+			<bReplaceByMax>0</bReplaceByMax>
+			<bReplaceByNeighbourAverage>0</bReplaceByNeighbourAverage>
+			<iNeighbourCount>1</iNeighbourCount>
+			<bReplaceByValue>0</bReplaceByValue>
+			<fReplaceValue>0</fReplaceValue>
+			<bReplaceByMostFreq>1</bReplaceByMostFreq>
+			<bReplaceByLeastFreq>0</bReplaceByLeastFreq>
+			<bReplaceByRandom>0</bReplaceByRandom>
+			<bReplaceByString>0</bReplaceByString>
+			<sReplaceString><![CDATA[]]></sReplaceString>
+			<bIdentOutliers>1</bIdentOutliers>
+			<fOutliersCoeff>3.5</fOutliersCoeff>
+			<bRemoveOutliers>1</bRemoveOutliers>
+			<bHandleOutliers>0</bHandleOutliers>
+			<bIdentMissing>1</bIdentMissing>
+			<bQuestAsMissing>1</bQuestAsMissing>
+			<bBlankAsMissing>1</bBlankAsMissing>
+			<bZeroAsMissing>0</bZeroAsMissing>
+			<bOtherAsMissing>0</bOtherAsMissing>
+			<sOtherAsMissing><![CDATA[]]></sOtherAsMissing>
+			<bRemoveMissing>1</bRemoveMissing>
+			<bHandleMissing>0</bHandleMissing>
+			<bIdentWrongType>1</bIdentWrongType>
+			<fWrongTypeAmount>0.005</fWrongTypeAmount>
+			<bRemoveWrongType>1</bRemoveWrongType>
+			<bHandleWrongType>0</bHandleWrongType>
+			<bEncodingUseGlobal>1</bEncodingUseGlobal>
+			<bAddBinaryToMissing>0</bAddBinaryToMissing>
+			<bAddBinaryToOutliers>0</bAddBinaryToOutliers>
+			<bAddBinaryToWrongtype>0</bAddBinaryToWrongtype>
+			<bAddLag>0</bAddLag>
+			<bSpecLags>0</bSpecLags>
+			<bSeqLags>1</bSeqLags>
+			<sSpecLags><![CDATA[]]></sSpecLags>
+			<SpecLags>
+				<size>0</size>
+				
+			</SpecLags>
+			<iLagStart>1</iLagStart>
+			<iLagEnd>1</iLagEnd>
+			<iLagStep>1</iLagStep>
+			<bEncodeAs1ofN>1</bEncodeAs1ofN>
+			<bEncodeAsBinary>0</bEncodeAsBinary>
+			<bEncodeAsNumeric>0</bEncodeAsNumeric>
+			<bEncodePeriod>1</bEncodePeriod>
+			<bWeekly>1</bWeekly>
+			<bMonthly>0</bMonthly>
+			<bYearly>0</bYearly>
+			<bEncodeAsCat>0</bEncodeAsCat>
+			<bDays>0</bDays>
+			<bWeekdays>0</bWeekdays>
+			<bMonths>1</bMonths>
+			<bQuaters>0</bQuaters>
+			<bYears>0</bYears>
+			<fMin>0</fMin>
+			<fMax>1</fMax>
+			<bHeadroom>0</bHeadroom>
+			<fHeadroom>0.1</fHeadroom>
+			<bPrepNeed>0</bPrepNeed>
+			<bIdentDate>1</bIdentDate>
+			<sDateFormat><![CDATA[dd.mm.yyyy]]></sDateFormat>
+			<DateFormat>
+				<delimiter><![CDATA[.]]></delimiter>
+				<part id="0">
+					<width>2</width>
+					<kind>0</kind>
+					
+				</part>
+				<part id="1">
+					<width>2</width>
+					<kind>1</kind>
+					
+				</part>
+				<part id="2">
+					<width>4</width>
+					<kind>2</kind>
+					
+				</part>
+				
+			</DateFormat>
+			<bIdentTime>1</bIdentTime>
+			<bNumColsAsCat>1</bNumColsAsCat>
+			<iNumColsAsCat>5</iNumColsAsCat>
+			<bTextColsAsCat>1</bTextColsAsCat>
+			<iTextColsAsCat>20</iTextColsAsCat>
+			<bDateTimeColsAsCat>1</bDateTimeColsAsCat>
+			<iDateTimeColsAsCat>8</iDateTimeColsAsCat>
+			
+		</column_descriptor_3>
+		<column_descriptor_4>
+			<column_name><![CDATA[Obzawejdane]]></column_name>
+			<iSelCol>0</iSelCol>
+			<bAnalysisUseGlobal>1</bAnalysisUseGlobal>
+			<bReplaceByMean>1</bReplaceByMean>
+			<bReplaceByMedian>0</bReplaceByMedian>
+			<bReplaceByMin>0</bReplaceByMin>
+			<bReplaceByMax>0</bReplaceByMax>
+			<bReplaceByNeighbourAverage>0</bReplaceByNeighbourAverage>
+			<iNeighbourCount>1</iNeighbourCount>
+			<bReplaceByValue>0</bReplaceByValue>
+			<fReplaceValue>0</fReplaceValue>
+			<bReplaceByMostFreq>1</bReplaceByMostFreq>
+			<bReplaceByLeastFreq>0</bReplaceByLeastFreq>
+			<bReplaceByRandom>0</bReplaceByRandom>
+			<bReplaceByString>0</bReplaceByString>
+			<sReplaceString><![CDATA[]]></sReplaceString>
+			<bIdentOutliers>1</bIdentOutliers>
+			<fOutliersCoeff>3.5</fOutliersCoeff>
+			<bRemoveOutliers>1</bRemoveOutliers>
+			<bHandleOutliers>0</bHandleOutliers>
+			<bIdentMissing>1</bIdentMissing>
+			<bQuestAsMissing>1</bQuestAsMissing>
+			<bBlankAsMissing>1</bBlankAsMissing>
+			<bZeroAsMissing>0</bZeroAsMissing>
+			<bOtherAsMissing>0</bOtherAsMissing>
+			<sOtherAsMissing><![CDATA[]]></sOtherAsMissing>
+			<bRemoveMissing>1</bRemoveMissing>
+			<bHandleMissing>0</bHandleMissing>
+			<bIdentWrongType>1</bIdentWrongType>
+			<fWrongTypeAmount>0.005</fWrongTypeAmount>
+			<bRemoveWrongType>1</bRemoveWrongType>
+			<bHandleWrongType>0</bHandleWrongType>
+			<bEncodingUseGlobal>1</bEncodingUseGlobal>
+			<bAddBinaryToMissing>0</bAddBinaryToMissing>
+			<bAddBinaryToOutliers>0</bAddBinaryToOutliers>
+			<bAddBinaryToWrongtype>0</bAddBinaryToWrongtype>
+			<bAddLag>0</bAddLag>
+			<bSpecLags>0</bSpecLags>
+			<bSeqLags>1</bSeqLags>
+			<sSpecLags><![CDATA[]]></sSpecLags>
+			<SpecLags>
+				<size>0</size>
+				
+			</SpecLags>
+			<iLagStart>1</iLagStart>
+			<iLagEnd>1</iLagEnd>
+			<iLagStep>1</iLagStep>
+			<bEncodeAs1ofN>1</bEncodeAs1ofN>
+			<bEncodeAsBinary>0</bEncodeAsBinary>
+			<bEncodeAsNumeric>0</bEncodeAsNumeric>
+			<bEncodePeriod>1</bEncodePeriod>
+			<bWeekly>1</bWeekly>
+			<bMonthly>0</bMonthly>
+			<bYearly>0</bYearly>
+			<bEncodeAsCat>0</bEncodeAsCat>
+			<bDays>0</bDays>
+			<bWeekdays>0</bWeekdays>
+			<bMonths>1</bMonths>
+			<bQuaters>0</bQuaters>
+			<bYears>0</bYears>
+			<fMin>0</fMin>
+			<fMax>1</fMax>
+			<bHeadroom>0</bHeadroom>
+			<fHeadroom>0.1</fHeadroom>
+			<bPrepNeed>0</bPrepNeed>
+			<bIdentDate>1</bIdentDate>
+			<sDateFormat><![CDATA[dd.mm.yyyy]]></sDateFormat>
+			<DateFormat>
+				<delimiter><![CDATA[.]]></delimiter>
+				<part id="0">
+					<width>2</width>
+					<kind>0</kind>
+					
+				</part>
+				<part id="1">
+					<width>2</width>
+					<kind>1</kind>
+					
+				</part>
+				<part id="2">
+					<width>4</width>
+					<kind>2</kind>
+					
+				</part>
+				
+			</DateFormat>
+			<bIdentTime>1</bIdentTime>
+			<bNumColsAsCat>1</bNumColsAsCat>
+			<iNumColsAsCat>5</iNumColsAsCat>
+			<bTextColsAsCat>1</bTextColsAsCat>
+			<iTextColsAsCat>20</iTextColsAsCat>
+			<bDateTimeColsAsCat>1</bDateTimeColsAsCat>
+			<iDateTimeColsAsCat>8</iDateTimeColsAsCat>
+			
+		</column_descriptor_4>
+		<column_descriptor_5>
+			<column_name><![CDATA[Cena (euro)]]></column_name>
+			<iSelCol>0</iSelCol>
+			<bAnalysisUseGlobal>1</bAnalysisUseGlobal>
+			<bReplaceByMean>1</bReplaceByMean>
+			<bReplaceByMedian>0</bReplaceByMedian>
+			<bReplaceByMin>0</bReplaceByMin>
+			<bReplaceByMax>0</bReplaceByMax>
+			<bReplaceByNeighbourAverage>0</bReplaceByNeighbourAverage>
+			<iNeighbourCount>1</iNeighbourCount>
+			<bReplaceByValue>0</bReplaceByValue>
+			<fReplaceValue>0</fReplaceValue>
+			<bReplaceByMostFreq>1</bReplaceByMostFreq>
+			<bReplaceByLeastFreq>0</bReplaceByLeastFreq>
+			<bReplaceByRandom>0</bReplaceByRandom>
+			<bReplaceByString>0</bReplaceByString>
+			<sReplaceString><![CDATA[]]></sReplaceString>
+			<bIdentOutliers>1</bIdentOutliers>
+			<fOutliersCoeff>3.5</fOutliersCoeff>
+			<bRemoveOutliers>1</bRemoveOutliers>
+			<bHandleOutliers>0</bHandleOutliers>
+			<bIdentMissing>1</bIdentMissing>
+			<bQuestAsMissing>1</bQuestAsMissing>
+			<bBlankAsMissing>1</bBlankAsMissing>
+			<bZeroAsMissing>0</bZeroAsMissing>
+			<bOtherAsMissing>0</bOtherAsMissing>
+			<sOtherAsMissing><![CDATA[]]></sOtherAsMissing>
+			<bRemoveMissing>1</bRemoveMissing>
+			<bHandleMissing>0</bHandleMissing>
+			<bIdentWrongType>1</bIdentWrongType>
+			<fWrongTypeAmount>0.005</fWrongTypeAmount>
+			<bRemoveWrongType>1</bRemoveWrongType>
+			<bHandleWrongType>0</bHandleWrongType>
+			<bEncodingUseGlobal>1</bEncodingUseGlobal>
+			<bAddBinaryToMissing>0</bAddBinaryToMissing>
+			<bAddBinaryToOutliers>0</bAddBinaryToOutliers>
+			<bAddBinaryToWrongtype>0</bAddBinaryToWrongtype>
+			<bAddLag>0</bAddLag>
+			<bSpecLags>0</bSpecLags>
+			<bSeqLags>1</bSeqLags>
+			<sSpecLags><![CDATA[]]></sSpecLags>
+			<SpecLags>
+				<size>0</size>
+				
+			</SpecLags>
+			<iLagStart>1</iLagStart>
+			<iLagEnd>1</iLagEnd>
+			<iLagStep>1</iLagStep>
+			<bEncodeAs1ofN>1</bEncodeAs1ofN>
+			<bEncodeAsBinary>0</bEncodeAsBinary>
+			<bEncodeAsNumeric>0</bEncodeAsNumeric>
+			<bEncodePeriod>1</bEncodePeriod>
+			<bWeekly>1</bWeekly>
+			<bMonthly>0</bMonthly>
+			<bYearly>0</bYearly>
+			<bEncodeAsCat>0</bEncodeAsCat>
+			<bDays>0</bDays>
+			<bWeekdays>0</bWeekdays>
+			<bMonths>1</bMonths>
+			<bQuaters>0</bQuaters>
+			<bYears>0</bYears>
+			<fMin>0</fMin>
+			<fMax>1</fMax>
+			<bHeadroom>0</bHeadroom>
+			<fHeadroom>0.1</fHeadroom>
+			<bPrepNeed>0</bPrepNeed>
+			<bIdentDate>1</bIdentDate>
+			<sDateFormat><![CDATA[dd.mm.yyyy]]></sDateFormat>
+			<DateFormat>
+				<delimiter><![CDATA[.]]></delimiter>
+				<part id="0">
+					<width>2</width>
+					<kind>0</kind>
+					
+				</part>
+				<part id="1">
+					<width>2</width>
+					<kind>1</kind>
+					
+				</part>
+				<part id="2">
+					<width>4</width>
+					<kind>2</kind>
+					
+				</part>
+				
+			</DateFormat>
+			<bIdentTime>1</bIdentTime>
+			<bNumColsAsCat>1</bNumColsAsCat>
+			<iNumColsAsCat>5</iNumColsAsCat>
+			<bTextColsAsCat>1</bTextColsAsCat>
+			<iTextColsAsCat>20</iTextColsAsCat>
+			<bDateTimeColsAsCat>1</bDateTimeColsAsCat>
+			<iDateTimeColsAsCat>8</iDateTimeColsAsCat>
+			
+		</column_descriptor_5>
+		<preferences>
+			<bAutoAnalyze>1</bAutoAnalyze>
+			<bAutoPartition>1</bAutoPartition>
+			<bAutoPreprocess>1</bAutoPreprocess>
+			<bReloadLastProj>0</bReloadLastProj>
+			<bAskToSaveProjOnExit>1</bAskToSaveProjOnExit>
+			<bConfirmOnExit>0</bConfirmOnExit>
+			<bFixedDecimals>1</bFixedDecimals>
+			<iDecPlaces>6</iDecPlaces>
+			<bOptAnalysis>0</bOptAnalysis>
+			<bPartition>0</bPartition>
+			<bOptPreprocess>0</bOptPreprocess>
+			<bOptArchSearch>0</bOptArchSearch>
+			<bOptTrain>1</bOptTrain>
+			<bOptJog>1</bOptJog>
+			<bBeepAfterArchSearch>0</bBeepAfterArchSearch>
+			<bBeepAfterTraining>0</bBeepAfterTraining>
+			<bPaintRecords>1</bPaintRecords>
+			<bMaxLogSize>1</bMaxLogSize>
+			<fMaxLogSize>500</fMaxLogSize>
+			
+		</preferences>
+		<query_form>
+			<sFileName><![CDATA[]]></sFileName>
+			<bSameStructure>0</bSameStructure>
+			<bOutIs>0</bOutIs>
+			<bAppendRes>0</bAppendRes>
+			<bOutsToQueryFile>0</bOutsToQueryFile>
+			
+		</query_form>
+		<network_set_form>
+			<bAdvanced>0</bAdvanced>
+			<bShowComments>0</bShowComments>
+			<sSelectedNet><![CDATA[]]></sSelectedNet>
+			<sActiveNet><![CDATA[Last Trained]]></sActiveNet>
+			
+		</network_set_form>
+		<training_options>
+			<TrainingAlg>0</TrainingAlg>
+			<fQPCoeff>1.75</fQPCoeff>
+			<fLearningRate>0.1</fLearningRate>
+			<fMomentum>0.1</fMomentum>
+			<bAdjustRates>0</bAdjustRates>
+			<bByErr>0</bByErr>
+			<bTrackTrainErr>1</bTrackTrainErr>
+			<bTrackAverage>1</bTrackAverage>
+			<ErrKind>0</ErrKind>
+			<fAE>3750</fAE>
+			<fMSE>0.01</fMSE>
+			<fCCR>0.95</fCCR>
+			<bByErrImpr>0</bByErrImpr>
+			<bNetErr>1</bNetErr>
+			<fNetErr>1e-07</fNetErr>
+			<iNetIters>10</iNetIters>
+			<bDSErr>0</bDSErr>
+			<fDSErr>1e-07</fDSErr>
+			<iDSIters>10</iDSIters>
+			<bByIters>0</bByIters>
+			<iIters>500000</iIters>
+			<RandMethod>0</RandMethod>
+			<fRandRange>0.3</fRandRange>
+			<bRandSeed>0</bRandSeed>
+			<iRandSeed>100</iRandSeed>
+			<bRestoreBestNet>1</bRestoreBestNet>
+			<bEarlyStopping>0</bEarlyStopping>
+			<iStoppingLevel>5</iStoppingLevel>
+			<bAddNoise>0</bAddNoise>
+			<fNoise>0.1</fNoise>
+			<iRetrains>1</iRetrains>
+			<ResNetCriteria>2</ResNetCriteria>
+			<fTrainPerc>0.3</fTrainPerc>
+			<fValidPerc>0</fValidPerc>
+			<fTestPerc>0.7</fTestPerc>
+			
+		</training_options>
+		<jog_weights_form>
+			<fJogSize>0.05</fJogSize>
+			<bTrainAfterJog>1</bTrainAfterJog>
+			<RandomDistrib>0</RandomDistrib>
+			
+		</jog_weights_form>
+		<training_visualization>
+			<bDataSet>1</bDataSet>
+			<bCorr>0</bCorr>
+			<bRSquar>0</bRSquar>
+			<bShowTrainErr>1</bShowTrainErr>
+			<bShowValErr>1</bShowValErr>
+			<bShowAppErr>1</bShowAppErr>
+			<bVisibleImprGraph>1</bVisibleImprGraph>
+			<NetworkError>0</NetworkError>
+			<iUpdateUnitId>0</iUpdateUnitId>
+			<fUpdateInterval>200</fUpdateInterval>
+			<iUpdateIntervalMsec>200</iUpdateIntervalMsec>
+			<bPlottingGap>0</bPlottingGap>
+			<iPlottingGap>1</iPlottingGap>
+			<bEDGFloatingRange>0</bEDGFloatingRange>
+			<bEDGCenterByZero>1</bEDGCenterByZero>
+			<bEDGFixedRange>0</bEDGFixedRange>
+			<dEDGMin>0</dEDGMin>
+			<dEDGMax>1</dEDGMax>
+			<bEDGNumberOfBars>1</bEDGNumberOfBars>
+			<iEDGNumberOfBars>40</iEDGNumberOfBars>
+			<bEDGStepSize>0</bEDGStepSize>
+			<dEDGStepSize>0.1</dEDGStepSize>
+			<bEDGPercent>0</bEDGPercent>
+			<bWDGFloatingRange>0</bWDGFloatingRange>
+			<bWDGCenterByZero>0</bWDGCenterByZero>
+			<bWDGFixedRange>1</bWDGFixedRange>
+			<dWDGMin>-10</dWDGMin>
+			<dWDGMax>10</dWDGMax>
+			<bWDGNumberOfBars>0</bWDGNumberOfBars>
+			<iWDGNumberOfBars>40</iWDGNumberOfBars>
+			<bWDGStepSize>1</bWDGStepSize>
+			<dWDGStepSize>1</dWDGStepSize>
+			<bWDGPercent>0</bWDGPercent>
+			
+		</training_visualization>
+		<time_series_mode>
+			<bTSActive>0</bTSActive>
+			<bForecastTS>0</bForecastTS>
+			<iPeriod>1</iPeriod>
+			<iLookAhead>1</iLookAhead>
+			<bRepartition>1</bRepartition>
+			
+		</time_series_mode>
+		<loss_matrices>
+			<iMatrixCount>0</iMatrixCount>
+			<vOutNames>
+				<size>0</size>
+				
+			</vOutNames>
+			<vOutIdxs>
+				<size>0</size>
+				
+			</vOutIdxs>
+			<vMatrices>
+				<size>0</size>
+				
+			</vMatrices>
+			
+		</loss_matrices>
+		<data_preview_options>
+			<bAutoAnalyse>1</bAutoAnalyse>
+			<bHeaders>1</bHeaders>
+			<cDelimeter><![CDATA[A]]></cDelimeter>
+			<bMultiDelims>0</bMultiDelims>
+			<iImportFrom>1</iImportFrom>
+			<cThousSep><![CDATA[0]]></cThousSep>
+			<cDecimSep><![CDATA[,]]></cDecimSep>
+			<cStringLimiter><![CDATA[0]]></cStringLimiter>
+			
+		</data_preview_options>
+		<network_architecture_design>
+			<iNumberOfLayer>1</iNumberOfLayer>
+			<iNeurons>8 | 0 | 0 | 0 | 0
+			</iNeurons>
+			
+		</network_architecture_design>
+		<architecture_search_options>
+			<SearchMethod>0</SearchMethod>
+			<iRetrains>1</iRetrains>
+			<iIters>500</iIters>
+			<iFitIndex>0</iFitIndex>
+			<bApplyBestNet>1</bApplyBestNet>
+			<iRange>1</iRange>
+			<bDetermineDiapason>1</bDetermineDiapason>
+			<iMin>3</iMin>
+			<iMax>43</iMax>
+			<iLayers>1</iLayers>
+			<Layer>
+				<item_0>
+					<iFrom>3</iFrom>
+					<iTo>43</iTo>
+					<iStep>1</iStep>
+					
+				</item_0>
+				<item_1>
+					<iFrom>1</iFrom>
+					<iTo>32767</iTo>
+					<iStep>1</iStep>
+					
+				</item_1>
+				<item_2>
+					<iFrom>1</iFrom>
+					<iTo>32767</iTo>
+					<iStep>1</iStep>
+					
+				</item_2>
+				<item_3>
+					<iFrom>1</iFrom>
+					<iTo>32767</iTo>
+					<iStep>1</iStep>
+					
+				</item_3>
+				<item_4>
+					<iFrom>1</iFrom>
+					<iTo>32767</iTo>
+					<iStep>1</iStep>
+					
+				</item_4>
+				
+			</Layer>
+			
+		</architecture_search_options>
+		<network_properties>
+			<iOutputsCount>1</iOutputsCount>
+			<sFxIn><![CDATA[Logistic]]></sFxIn>
+			<vOutProps>
+				<size>1</size>
+				<item id="0">
+					<sPropCaption><![CDATA[Cena (euro)]]></sPropCaption>
+					<iNeuronsOut>1</iNeuronsOut>
+					<sActFxOut><![CDATA[Logistic]]></sActFxOut>
+					<sErrOut><![CDATA[Sum-of-squares]]></sErrOut>
+					<bOutIsCat>0</bOutIsCat>
+					<iClassModel>0</iClassModel>
+					<sClassModel><![CDATA[Winner-takes-all]]></sClassModel>
+					<fAcceptLevel>0.8</fAcceptLevel>
+					<fRejectLevel>0.2</fRejectLevel>
+					
+				</item>
+				
+			</vOutProps>
+			<vOutErrWeights>
+				<size>1</size>
+				<item id="0">
+					1
+				</item>
+				
+			</vOutErrWeights>
+			<bEqualErrWeights>1</bEqualErrWeights>
+			
+		</network_properties>
+		<subset_selection_options>
+			<iEnabledRows>22</iEnabledRows>
+			<fTrain>0.68</fTrain>
+			<fValid>0.16</fValid>
+			<fTest>0.16</fTest>
+			<fIgnore>0</fIgnore>
+			<iTrain>16</iTrain>
+			<iValid>3</iValid>
+			<iTest>3</iTest>
+			<iIgnore>0</iIgnore>
+			<bUsePercents>1</bUsePercents>
+			<bRandomOrder>1</bRandomOrder>
+			<sSSNames>
+				<size>4</size>
+				<item id="0">
+					<![CDATA[Training set]]>
+				</item>
+				<item id="1">
+					<![CDATA[Validation set]]>
+				</item>
+				<item id="2">
+					<![CDATA[Test set]]>
+				</item>
+				<item id="3">
+					<![CDATA[Ignored set]]>
+				</item>
+				
+			</sSSNames>
+			<iSSOrder>
+				<size>4</size>
+				<item id="0">
+					0
+				</item>
+				<item id="1">
+					1
+				</item>
+				<item id="2">
+					2
+				</item>
+				<item id="3">
+					3
+				</item>
+				
+			</iSSOrder>
+			
+		</subset_selection_options>
+		<confusion_matrix_options>
+			<fTargMin>0</fTargMin>
+			<fTargMax>1</fTargMax>
+			<NumOfRows>
+				<value>10</value>
+				<min>2</min>
+				<max>1000</max>
+				
+			</NumOfRows>
+			<Step>
+				<value>0.3</value>
+				<min>1e-20</min>
+				<max>1e+20</max>
+				
+			</Step>
+			<Prec>
+				<value>2</value>
+				<min>0</min>
+				<max>10</max>
+				
+			</Prec>
+			<bAlign>0</bAlign>
+			<bDesNumberChecked>1</bDesNumberChecked>
+			<Choice>0</Choice>
+			
+		</confusion_matrix_options>
+		<network_set_options>
+			<bAddAll>0</bAddAll>
+			<bAddBetter>1</bAddBetter>
+			<bAddNone>0</bAddNone>
+			<bUpdateLast>1</bUpdateLast>
+			<bConfirmDelete>1</bConfirmDelete>
+			
+		</network_set_options>
+		
+	</neurointelligence_gui>
+	
+</neuro_intelligence_network>
